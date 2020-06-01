@@ -1,0 +1,58 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { number, color, text, withKnobs } from '@storybook/addon-knobs';
+
+import { ButtonComponent } from 'ui';
+
+<Meta title="TopFolder/SubFolder/Test2" decorators={[withKnobs]} component={ButtonComponent} />
+
+# Button
+
+Note that you can't put spaces anywhere between the Preview tags => Else it breaks the build
+
+Also note that doing this enables the knob addon for all declared components but it doesn't render correctly in the preview (doc)
+
+Let's define a story for our `Button` component:
+
+<Preview>
+    <Story name="default">
+       <ButtonComponent
+            width={number("Width", 100)}
+            height={number("Height", 50)}
+            backgroundColor={color("BackgroundColor", "#49F1FF")}
+            textColor={color("TextColor", "#FFFFFF")}
+        >
+            {text("Label", "Default")}
+        </ButtonComponent>
+    </Story>
+    <Story name="blue">
+       <ButtonComponent
+            width={number("Width", 100)}
+            height={number("Height", 50)}
+            backgroundColor={color("BackgroundColor", "blue")}
+            textColor={color("TextColor", "#FFFFFF")}
+        >
+            {text("Label", "Default")}
+        </ButtonComponent>
+    </Story>
+    <Story name="red">
+       <ButtonComponent
+            width={number("Width", 100)}
+            height={number("Height", 50)}
+            backgroundColor={color("BackgroundColor", "red")}
+            textColor={color("TextColor", "#FFFFFF")}
+        >
+            {text("Label", "Default")}
+        </ButtonComponent>
+    </Story>
+    <Story name="green">
+       <ButtonComponent
+            width={number("Width", 100)}
+            height={number("Height", 50)}
+            backgroundColor={color("BackgroundColor", "green")}
+            textColor={color("TextColor", "#FFFFFF")}
+        >
+            {text("Label", "Default")}
+        </ButtonComponent>
+    </Story>
+</Preview>
+

@@ -1,0 +1,25 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+import { ButtonComponent } from 'ui';
+
+<Meta title="TopFolder/SubFolder/Test1" component={ButtonComponent} />
+
+# Button
+
+Let's define a story for our `Button` component:
+
+<Preview>
+    <Story name="default">
+        <ButtonComponent>Default</ButtonComponent>
+    </Story>
+    <Story name="blue">
+        <ButtonComponent backgroundColor="blue">Blue</ButtonComponent>
+    </Story>
+    <Story name="red">
+        <ButtonComponent backgroundColor="red">Red</ButtonComponent>
+    </Story>
+    <Story name="green">
+        <ButtonComponent backgroundColor="green">Green</ButtonComponent>
+    </Story>
+</Preview>
+
